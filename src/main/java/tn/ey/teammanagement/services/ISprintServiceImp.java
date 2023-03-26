@@ -20,7 +20,7 @@ public class ISprintServiceImp implements ISprintService{
     @Scheduled(cron = "*/30 * * * * *")
     public void getNbreSprintByCurrentProject() {
         for ( Project p : projectRepo.findAll()) {
-            log.info("le projet : "+ p.getTitle()+" : "+p.getSprints().size()+" sprints");
+            log.info("Projet: "+ p.getTitle()+" : "+p.getSprints().size()+" sprints");
         }
 
     }
